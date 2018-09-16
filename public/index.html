@@ -1,0 +1,100 @@
+<html>
+
+<head>
+
+	<title>Sharer</title>
+
+	<link rel="icon" href="/images/sharer.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono">
+	<link rel="stylesheet" href="css/stylesheet.css">
+
+	<!-- jsmpeg -->
+<!-- 	<script src="js/jsmpg.js"></script> -->
+
+	<!-- socket.io -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+	<!-- jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<!-- BOOTSTRAP 4 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@2/dist/tippy.all.min.js"></script>
+
+<!-- 	<script src="js/download.js"></script> -->
+	<script src="js/sweetalert2.min.js"></script>
+
+</head>
+
+
+<body>
+
+	<div id="container">
+		<div id="content">
+			
+			<div class="spacer"></div>
+
+			<div id="header">
+				<h2>Click here to generate download links for the client and host!</h2>
+				<div class="flexbox-center">
+					<button id="generateDownload" class="btn btn-primary">Generate Download Links</button>
+				</div>
+			</div>
+
+			<div class="spacer"></div>
+
+			<!-- 			<div class="input-group">
+				<input id="clientURL" type="text" value="">
+				<span class="input-group-button">
+					<button class="btn" type="button" data-clipboard-demo="" data-clipboard-target="#clientURL">
+						<img class="clippy" src="/images/svg/clippy.svg" width="13" alt="Copy to clipboard">
+					</button>
+				</span>
+			</div> -->
+
+			<div id="urls">
+				
+				<div id="getHostURL">
+					<div>
+						Download and run this where you want to <span class="italics">host</span> the game:
+					</div>
+					<div class="input-group">
+						<input id="hostURL" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" type="button" data-clipboard-target="#hostURL">
+								<img class="clippy" src="/images/svg/clippy.svg" width="13" alt="Copy to clipboard" title="Copied!">
+							</button>
+						</div>
+					</div>
+					Note that you have to run install.bat first.<br>
+					You may also have to restart your PC for it to start working.
+				</div>
+
+				<div id="getClientURL">
+					Download and run this where you want to <span class="italics">play</span> the game:
+					<div class="input-group">
+						<input id="clientURL" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" type="button" data-clipboard-target="#clientURL">
+								<img class="clippy" src="/images/svg/clippy.svg" width="13" alt="Copy to clipboard" title="Copied!">
+							</button>
+						</div>
+					</div>
+					Or use the online version:<a id="connectURL" href="">here</a><br>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+	
+	<script src="js/main.js"></script>
+</body>
+
+
+</html>
